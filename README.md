@@ -1,4 +1,4 @@
-| ![Desktop Home](public/scr-capture-desktop-home.png) |
+![Desktop Home](public/scr-capture-desktop-home.png)
 
 # 📱 ArtaDev App Showcase
 
