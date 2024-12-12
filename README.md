@@ -80,10 +80,11 @@ php artisan serve
 ```
 
 ## Akses Admin Default:
-
+```bash
+localhost/login
 Email: admin@artadev.my.id
-Password: password
-
+Password: admin
+```
 
 ### 💡 Penjelasan Fitur Utama
 Tampilan Aplikasi
