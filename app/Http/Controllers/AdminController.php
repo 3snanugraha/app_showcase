@@ -13,11 +13,7 @@ class AdminController extends Controller
     public function dashboard()
     {
         $apps = AppShowcase::withCount('testers')->get();
-        $testers = AppTester::with('app')
-            ->where('is_mail_sent', false)
-            ->latest()
-            ->take(5)
-            ->get();
+        $testers = AppTester::with('app')->latest()->get();
             
         return view('admin.dashboard', compact('apps', 'testers'));
     }

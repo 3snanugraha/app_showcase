@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtaDev Katalog Aplikasi</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('favicon.ico') }}">
+    
+    <!-- SEO Meta Tags -->
+    <title>{{ $title ?? 'ArtaDev Katalog Aplikasi' }}</title>
+    <meta name="description" content="{{ $description ?? 'Katalog aplikasi mobile berkualitas dari ArtaDev untuk Indonesia' }}">
+    <meta name="keywords" content="aplikasi android, pengembang aplikasi, artadev, mobile apps">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $title ?? 'ArtaDev Katalog Aplikasi' }}">
+    <meta property="og:description" content="{{ $description ?? 'Katalog aplikasi mobile berkualitas dari ArtaDev untuk Indonesia' }}">
+    <meta property="og:image" content="{{ asset('icon.png') }}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title ?? 'ArtaDev Katalog Aplikasi' }}">
+    <meta name="twitter:description" content="{{ $description ?? 'Katalog aplikasi mobile berkualitas dari ArtaDev untuk Indonesia' }}">
+    <meta name="twitter:image" content="{{ asset('icon.png') }}">
+
     @vite('resources/css/app.css')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
@@ -12,11 +34,11 @@
     <nav class="bg-indigo-600 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
+                <div class="flex items-center gap-2">
+                    <img src="{{ asset('favicon.ico') }}" alt="Artadev Logo" class="h-8 w-8">
                     <a href="/" class="text-white font-bold text-xl">Artadev Apps</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <!-- <a href="{{ route('home') }}" class="text-white hover:text-indigo-200">Aplikasi</a> -->
                    <a href="https://wa.me/62895339046899?text=Halo%20Artadev%2C%0ASaya%20tertarik%20untuk%20request%20pembuatan%20aplikasi.%0A%0ANama%3A%20%0AJenis%20Aplikasi%3A%20%0ADeskripsi%20Singkat%3A%20" 
                       target="_blank" 
                       class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300 flex items-center gap-2">
@@ -92,7 +114,6 @@
         </div>
     </div>
     @endif
-
 
     <!-- Main Content -->
     <main class="flex-grow" id="apps">

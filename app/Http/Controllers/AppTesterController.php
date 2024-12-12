@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AppTester;
 use App\Http\Requests\TesterRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestInvitation;
 
 class AppTesterController extends Controller
 {
@@ -23,8 +25,7 @@ class AppTesterController extends Controller
     {
         $tester = AppTester::with('app')->findOrFail($id);
         
-        // Here you would implement the email sending logic
-        // using the $tester->app->internal_test_link
+        Mail::to($tester->email)->send(new TestInvitation($tester));
         
         $tester->update([
             'is_mail_sent' => true,
