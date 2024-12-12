@@ -28,31 +28,31 @@ Platform elegan untuk menampilkan dan mengelola aplikasi mobile dengan sistem pe
 ## 🚀 Instalasi
 
 1. Klon repositori:
-
+```bash
 git clone https://github.com/3snanugraha/app-showcase.git
 cd app-showcase
-
+```
 2. Instal dependensi:
-
+```bash
 composer install
 npm install
-
-3. Pengaturan Variabel Lingkungan:
-
+```
+3. Pengaturan Environment Variabel:
+```bash
 cp .env.example .env
 php artisan key:generate
-
+```
 4. Konfigurasi Database:
-
+```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=artadev-app-showcase
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
 5. Konfigurasi pengaturan email di .env:
-
+```bash
 MAIL_MAILER=smtp
 MAIL_HOST=mail.artadev.my.id
 MAIL_PORT=465
@@ -61,23 +61,23 @@ MAIL_PASSWORD=your-password
 MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS="developer@artadev.my.id"
 MAIL_FROM_NAME="ArtaDev Apps"
-
+```
 6. Jalankan Migrasi dan Seeder:
-
+```bash
 php artisan migrate:fresh --seed
-
+```
 7. Hubungkan Storage:
-
+```bash
 php artisan storage:link
-
+```
 8. Build aset:
-
+```bash
 npm run dev
-
+```
 9. Mulai server pengembangan:
-
+```bash
 php artisan serve
-
+```
 
 ## Akses Admin Default:
 
