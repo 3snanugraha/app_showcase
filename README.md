@@ -1,4 +1,4 @@
-| ![Desktop Home](public/scr-capture-desktop-home.png) | ![Mobile Home](public/scr-capture-mobile-home.png) | ![Mobile Admin](public/scr-capture-mobile-admin.png) |
+| ![Desktop Home](public/scr-capture-desktop-home.png) |
 
 # 📱 ArtaDev App Showcase
 
