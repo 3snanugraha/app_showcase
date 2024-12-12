@@ -1,3 +1,5 @@
+| ![Desktop Home](public/scr-capture-desktop-home.png) | ![Mobile Home](public/scr-capture-mobile-home.png) | ![Mobile Admin](public/scr-capture-mobile-admin.png) |
+
 # 📱 ArtaDev App Showcase
 
 Platform elegan untuk menampilkan dan mengelola aplikasi mobile dengan sistem pendaftaran beta tester.
