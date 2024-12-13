@@ -43,22 +43,27 @@ class AppShowcaseController extends Controller
             'app_size' => 'required|numeric',
             'screenshots.*' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ]);
-    
+
         if ($request->hasFile('app_banner')) {
-            $validated['app_banner'] = 'storage/' . $request->file('app_banner')->store('app-banners', 'public');
+            $file = $request->file('app_banner');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('storage'), $filename);
+            $validated['app_banner'] = 'storage/' . $filename;
         }
-    
+
         $screenshots = [];
         if ($request->hasFile('screenshots')) {
             foreach ($request->file('screenshots') as $file) {
-                $screenshots[] = 'storage/' . $file->store('app-screenshots', 'public');
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move(public_path('storage'), $filename);
+                $screenshots[] = 'storage/' . $filename;
             }
         }
         $validated['app_screenshots'] = $screenshots;
         $validated['is_active'] = true;
-    
+
         AppShowcase::create($validated);
-    
+
         return redirect()->route('admin.dashboard')
             ->with('success', 'Aplikasi berhasil ditambahkan');
     }
@@ -93,25 +98,38 @@ class AppShowcaseController extends Controller
             'app_size' => 'required|numeric',
             'screenshots.*' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
         ]);
-    
+
         if ($request->hasFile('app_banner')) {
-            Storage::disk('public')->delete(str_replace('storage/', '', $app->app_banner));
-            $validated['app_banner'] = 'storage/' . $request->file('app_banner')->store('app-banners', 'public');
-        }
-    
-        if ($request->hasFile('screenshots')) {
-            foreach ($app->app_screenshots as $screenshot) {
-                Storage::disk('public')->delete(str_replace('storage/', '', $screenshot));
+            // Delete old banner
+            if (file_exists(public_path($app->app_banner))) {
+                unlink(public_path($app->app_banner));
             }
+            
+            $file = $request->file('app_banner');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('storage'), $filename);
+            $validated['app_banner'] = 'storage/' . $filename;
+        }
+
+        if ($request->hasFile('screenshots')) {
+            // Delete old screenshots
+            foreach ($app->app_screenshots as $screenshot) {
+                if (file_exists(public_path($screenshot))) {
+                    unlink(public_path($screenshot));
+                }
+            }
+            
             $screenshots = [];
             foreach ($request->file('screenshots') as $file) {
-                $screenshots[] = 'storage/' . $file->store('app-screenshots', 'public');
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $file->move(public_path('storage'), $filename);
+                $screenshots[] = 'storage/' . $filename;
             }
             $validated['app_screenshots'] = $screenshots;
         }
-    
+
         $app->update($validated);
-    
+
         return redirect()->route('admin.dashboard')
             ->with('success', 'Aplikasi berhasil diperbarui');
     }
@@ -120,15 +138,19 @@ class AppShowcaseController extends Controller
     {
         $app = AppShowcase::findOrFail($id);
         
-        // Delete associated files
-        Storage::disk('public')->delete(str_replace('storage/', '', $app->app_banner));
-        foreach ($app->app_screenshots as $screenshot) {
-            Storage::disk('public')->delete(str_replace('storage/', '', $screenshot));
+        // Delete files
+        if (file_exists(public_path($app->app_banner))) {
+            unlink(public_path($app->app_banner));
         }
         
-        // Delete app and related testers (soft delete)
+        foreach ($app->app_screenshots as $screenshot) {
+            if (file_exists(public_path($screenshot))) {
+                unlink(public_path($screenshot));
+            }
+        }
+        
         $app->delete();
-    
+
         return redirect()->route('admin.dashboard')
             ->with('success', 'Aplikasi berhasil dihapus');
     }

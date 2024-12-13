@@ -32,8 +32,8 @@ class AppShowcaseTableSeeder extends Seeder
 • ❤️ Simpan Chord Favorit
 
 Chordpedia - Bikin main gitarmu makin asyik! 🎸✨',
-                'app_banner' => 'storage/app-banners/chordpedia-banner.png',
-            'app_screenshots' => '["storage\\/app-screenshots\\/chordpedia-screen (1).jpg","storage\\/app-screenshots\\/chordpedia-screen (2).jpg","storage\\/app-screenshots\\/chordpedia-screen (3).jpg","storage\\/app-screenshots\\/chordpedia-screen (4).jpg","storage\\/app-screenshots\\/chordpedia-screen (5).jpg","storage\\/app-screenshots\\/chordpedia-screen (6).jpg","storage\\/app-screenshots\\/chordpedia-screen (7).jpg","storage\\/app-screenshots\\/chordpedia-screen (8).jpg","storage\\/app-screenshots\\/chordpedia-screen (9).jpg"]',
+                'app_banner' => 'storage/chordpedia-banner.png',
+            'app_screenshots' => '["storage/chordpedia-screen (1).jpg","storage/chordpedia-screen (2).jpg","storage/chordpedia-screen (3).jpg","storage/chordpedia-screen (4).jpg","storage/chordpedia-screen (5).jpg","storage/chordpedia-screen (6).jpg","storage/chordpedia-screen (7).jpg","storage/chordpedia-screen (8).jpg","storage/chordpedia-screen (9).jpg"]',
                 'app_version' => '1.0.0',
                 'app_package_name' => 'com.artadev.chordpedia',
                 'app_download_link' => 'https://drive.google.com/file/d/19YOThgJFgLrg8XMd3Z0fS1GursvLrueb/view?usp=sharing',
@@ -61,8 +61,8 @@ Chordpedia - Bikin main gitarmu makin asyik! 🎸✨',
 - Download jadwal shalat bulanan (PDF)
 - Antarmuka modern
 Kami berkomitmen mengembangkan aplikasi ini lebih baik. Dukung kami dengan rating dan ulasan di Play Store!',
-                'app_banner' => 'storage/app-banners/73DDrFwniNUdFMRahpOWkNTAdjS6qZHaEC5OD0wN.png',
-                'app_screenshots' => '["storage\\/app-screenshots\\/XSqK2a3zXwQqlwVN0SlsgnOQvzZVfimdQgND9Zej.jpg","storage\\/app-screenshots\\/jfdPSiN3xBhNeLBPhMZuV0IocDqw12PyZMsQfpg5.jpg","storage\\/app-screenshots\\/hxJqgrr6AtvbT94v0a4Dn1gXhn7OG7CI6uHtBtxi.jpg","storage\\/app-screenshots\\/ZkJm1jfUn5erMuJkOarAlvHHlGgrKq0tU4qP63wa.jpg","storage\\/app-screenshots\\/dHePeYcibT4j5LLJb2L7cF9Sw8YIAUca6weNTycY.jpg","storage\\/app-screenshots\\/y1WGoL7be094aXArlxvD3cJZkfewRt3DlLeBBxep.jpg","storage\\/app-screenshots\\/Q3sVyPQvBwCrJdrY1EafKUoHgRvyXbse3ELMh37U.jpg","storage\\/app-screenshots\\/F87AGiSIJrrUM05dMRv9Ni6ekIPlol0YZaWGFDH0.jpg","storage\\/app-screenshots\\/CmDwmphClUVM4Ms0Crkpy95thXHI6294uoYjrERW.jpg","storage\\/app-screenshots\\/ICYzgdOMSGUovRebxd5fhdFokuRVwbb3wX0NnU2I.jpg","storage\\/app-screenshots\\/iufVhZ1k39Dxar1x2yJJCCUmh9VOYkXPT1JslPg6.jpg","storage\\/app-screenshots\\/oBPQBpFk7PTa3BSSLIbXwsC0TALvng1kQvJ23wR3.jpg","storage\\/app-screenshots\\/Hu1WD9NxtTEfYIefUzFetd5WqnvzTRIpTUEnAxeH.jpg","storage\\/app-screenshots\\/xGZ9iC4zlBSZahi70mrUra14onsJQQNadEJCNnNa.jpg","storage\\/app-screenshots\\/15vrxZ5x4eT0UxzuvdwZKnmPImxlrDxbuRzEx0vW.jpg","storage\\/app-screenshots\\/2XM5sIBdOBwhMOcKhDfUzNqhLynCtXJyG2aPBKFp.jpg"]',
+                'app_banner' => 'storage/73DDrFwniNUdFMRahpOWkNTAdjS6qZHaEC5OD0wN.png',
+                'app_screenshots' => '["storage/XSqK2a3zXwQqlwVN0SlsgnOQvzZVfimdQgND9Zej.jpg","storage/jfdPSiN3xBhNeLBPhMZuV0IocDqw12PyZMsQfpg5.jpg","storage/hxJqgrr6AtvbT94v0a4Dn1gXhn7OG7CI6uHtBtxi.jpg","storage/ZkJm1jfUn5erMuJkOarAlvHHlGgrKq0tU4qP63wa.jpg","storage/dHePeYcibT4j5LLJb2L7cF9Sw8YIAUca6weNTycY.jpg","storage/y1WGoL7be094aXArlxvD3cJZkfewRt3DlLeBBxep.jpg","storage/Q3sVyPQvBwCrJdrY1EafKUoHgRvyXbse3ELMh37U.jpg","storage/F87AGiSIJrrUM05dMRv9Ni6ekIPlol0YZaWGFDH0.jpg","storage/CmDwmphClUVM4Ms0Crkpy95thXHI6294uoYjrERW.jpg","storage/ICYzgdOMSGUovRebxd5fhdFokuRVwbb3wX0NnU2I.jpg","storage/iufVhZ1k39Dxar1x2yJJCCUmh9VOYkXPT1JslPg6.jpg","storage/oBPQBpFk7PTa3BSSLIbXwsC0TALvng1kQvJ23wR3.jpg","storage/Hu1WD9NxtTEfYIefUzFetd5WqnvzTRIpTUEnAxeH.jpg","storage/xGZ9iC4zlBSZahi70mrUra14onsJQQNadEJCNnNa.jpg","storage/15vrxZ5x4eT0UxzuvdwZKnmPImxlrDxbuRzEx0vW.jpg","storage/2XM5sIBdOBwhMOcKhDfUzNqhLynCtXJyG2aPBKFp.jpg"]',
                 'app_version' => '1.0.0',
                 'app_package_name' => 'com.islamku.app',
                 'app_download_link' => 'https://example.com/islamku.apk',
@@ -90,8 +90,8 @@ Hadits Lengkap v1.0.0:
 🚀 Performa:
 • Ringan & Responsif
 • Mode Gelap/Terang',
-                'app_banner' => 'storage/app-banners/uPd636eFTrKfvnudAlULDEKjeDqCz5WRbRF7c1eM.png',
-                'app_screenshots' => '["storage\\/app-screenshots\\/uhZr7lOqoAKS3TY6GavevAqYH9Nmr5n2QdfMciG3.jpg","storage\\/app-screenshots\\/PzmvaKYCZBnihFKMjMz3nSOCRsEK2a9kXnUH9yyh.jpg","storage\\/app-screenshots\\/Vs7BwHvnHdJOaomTvbGmAV2TX6Wi1GAo3PmzZ2xi.jpg","storage\\/app-screenshots\\/KBmkcAvqSz84pY3lmP6uWiCKNfR6ktSDBM5U5yi0.jpg","storage\\/app-screenshots\\/DY90uajLyraEIxWwGAqNLo9vcedsPAeRGZKzWOWT.jpg","storage\\/app-screenshots\\/xKXoV9XlTG6FYTzElY81JOs5TIjcSqGxyfw8dfzK.jpg"]',
+                'app_banner' => 'storage/uPd636eFTrKfvnudAlULDEKjeDqCz5WRbRF7c1eM.png',
+                'app_screenshots' => '["storage/uhZr7lOqoAKS3TY6GavevAqYH9Nmr5n2QdfMciG3.jpg","storage/PzmvaKYCZBnihFKMjMz3nSOCRsEK2a9kXnUH9yyh.jpg","storage/Vs7BwHvnHdJOaomTvbGmAV2TX6Wi1GAo3PmzZ2xi.jpg","storage/KBmkcAvqSz84pY3lmP6uWiCKNfR6ktSDBM5U5yi0.jpg","storage/DY90uajLyraEIxWwGAqNLo9vcedsPAeRGZKzWOWT.jpg","storage/xKXoV9XlTG6FYTzElY81JOs5TIjcSqGxyfw8dfzK.jpg"]',
                 'app_version' => '1.0.0',
                 'app_package_name' => 'com.artadev.haditslengkap',
                 'app_download_link' => 'https://example.com/haditslengkap.apk',
